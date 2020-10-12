@@ -1,19 +1,27 @@
-class Transformer {
+class LocalImage {
   static mimeTypes () {
-    return ['image/jpg']
+    return ['image/jpeg', 'image/png']
+  }
+
+  constructor(api, options) {
+    options.assets.app.store.hooks.addNode.tap({
+      name: 'LocalImage',
+      before: 'TransformNodeContent'
+    }, options => {
+      options.internal.content = {
+        ...options,
+        internal: {},
+        path: options.internal.origin
+      }
+    })
   }
 
   parse (source) {
-    console.log(source)
-
-    return {}
-  }
-
-  extendNodeType ({ graphql }) {
     return {
-      // custom GraphQL fields for transformed node
+      ...source,
+      local: source.path
     }
   }
 }
 
-module.exports = Transformer
+module.exports = LocalImage
