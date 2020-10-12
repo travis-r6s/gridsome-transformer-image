@@ -1,0 +1,8 @@
+{
+  "name": "gridsome-transformer-image",
+  "version": "0.1.0",
+  "description": "Image transformer plugin for Gridsome",
+  "main": "index.js",
+  "author": "Travis Reynolds",
+  "license": "MIT"
+}
