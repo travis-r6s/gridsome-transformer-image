@@ -3,6 +3,20 @@
   "version": "0.1.0",
   "description": "Image transformer plugin for Gridsome",
   "main": "index.js",
-  "author": "Travis Reynolds",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "image",
+    "gridsome",
+    "transformer-image",
+    "gridsome-transformer",
+    "gridsome-transformer-image"
+  ],
+  "author": {
+    "name": "Travis Reynolds",
+    "email": "travis@travisreynolds.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thetre97/gridsome-transformer-image.git"
+  }
 }
